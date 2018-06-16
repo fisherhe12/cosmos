@@ -1,6 +1,3 @@
-/**
- *
- */
 package org.cosmos.common.text;
 
 import org.apache.commons.lang3.StringUtils;

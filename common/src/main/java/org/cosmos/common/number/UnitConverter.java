@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 /**
  * 单位转换器,将带单位的时间和字符串进行转换
- *
+ * <p>
  * from Facebook
  * https://github.com/facebook/jcommon/blob/master/config/src/main/java/com/facebook/config/ConfigUtil.java
  */

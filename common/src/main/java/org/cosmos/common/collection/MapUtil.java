@@ -5,12 +5,10 @@ import com.google.common.collect.*;
 import com.google.common.util.concurrent.AtomicLongMap;
 import org.apache.commons.lang3.mutable.MutableInt;
 import org.apache.commons.lang3.mutable.MutableLong;
-import org.cosmos.common.base.Platforms;
 import org.cosmos.common.base.annatation.NotNull;
 import org.cosmos.common.base.annatation.Nullable;
 import org.cosmos.common.collection.type.primitive.IntObjectHashMap;
 import org.cosmos.common.collection.type.primitive.LongObjectHashMap;
-import org.cosmos.common.concurrent.jsr166e.ConcurrentHashMapV8;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -185,11 +183,7 @@ public class MapUtil {
      * 如果JDK8，使用原生ConcurrentHashMap，否则使用移植版
      */
     public static <K, V> ConcurrentMap<K, V> newConcurrentHashMap() {
-        if (Platforms.IS_ATLEASET_JAVA8) {
-            return new ConcurrentHashMap<K, V>();
-        } else {
-            return new ConcurrentHashMapV8<K, V>();
-        }
+        return new ConcurrentHashMap<>();
     }
 
     /**

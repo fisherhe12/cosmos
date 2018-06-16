@@ -16,7 +16,7 @@ import java.util.zip.CRC32;
 /**
  * 封装各种Hash算法的工具类
  * <p>
- * 1.SHA-1, 安全性较高, 返回byte[](可用Encodes进一步被编码为Hex, Base64)
+ * 1.SHA-1, 安全性较高, 返回byte[](可用EncodeUtil进一步被编码为Hex, Base64)
  * <p>
  * 性能优化，使用ThreadLocal的MessageDigest(from ElasticSearch)
  * <p>
